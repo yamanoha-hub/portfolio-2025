@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>portfolio</title>
+  <!-- css読み込み -->
+  <link rel="stylesheet" href="sass/reset.css">
+  <link rel="stylesheet" href="sass/style.css">
+
+  <!-- aos -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+<header class="header">
+  <a href="index.html" class="header__logo" aria-current="page">
+    <img src="images/portfolio-logo2.png" alt="ポートフォリオ画像">
+  </a>
+  <nav class="header__nav">
+    <ul class="header__nav__list">
+      <li><a href="#works">制作実績</a></li>
+      <li><a href="#about">プロフィール</a></li>
+      <li><a href="#contact">お問い合わせ</a></li>
+    </ul>
+    <div class="header__nav-hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>    
+  </nav>
+</header>
+<main>
+  <section class="works" id="works">
+    <div class="wrapper" data-aos="fade-up">
+      <div class="section__ttl">
+        <h2>制作実績</h2>
+        <span>WORKS</span>
+      </div>
+      <ul class="works__content">
+        <li class="works__content__item">
+          <h3>がんばるペイント企業サイト</h3>
+          <img src="images/portfolio-logo.png" alt="がんばるペイントサムネイル">
+          <div class="works__content__item--detail">
+            <p>WordPressで構築。構成・デザイン・SEOを意識して制作。
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi earum voluptates vero! Sed pariatur velit illo fugiat dolor? Dicta velit magnam obcaecati impedit magni numquam delectus facilis soluta blanditiis pariatur.</p>
+          </div>
+          <a href="https://ganbarupaint.com/" target="_blank" class="btn">
+            <h4>サイトを見る</h4>
+          </a>
+        </li>
+        <li class="works__content__item">
+          <h3>模写コーポレートサイト</h3>
+          <img src="images/dummy.png" alt="">
+          <div class="works__content__item--detail">
+            <p>HTML/CSS/SCSS/JS/GitHubで構築した模写サイト。Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum quae asperiores voluptate fugiat error hic impedit dolor fuga modi, dicta, laboriosam ea accusantium corporis animi, quas quia consequatur sunt maiores?</p>
+          </div>
+          <a href="https://ganbarupaint.com/" target="_blank" class="btn">
+            <h4>サイトを見る</h4>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="wrapper" data-aos="fade-up">
+      <div class="section__ttl">
+        <h2>プロフィール</h2>
+        <span>PROFILE</span>
+      </div>
+      <div class="about__content">
+        <img src="images/portfolio-logo2.png" alt="プロフィール画像">
+        <article class="about__content__text">
+          <h3>山端 泰光</h3>
+          <br>
+          <p>元・塗装／空調職人 → Web制作へ。丁寧さと誠実さを武器に、信頼される制作者を目指しています。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="news" id="news">
+    <div class="wrapper" data-aos="fade-up">
+      <div class="section__ttl">
+        <h2>制作履歴</h2>
+        <span>NEWS</span>
+      </div>
+      <ul class="news__area">
+        <li>
+          <a href="#" class="news__area__list">
+            <img src="images/dummy2.png" alt="ダミー画像">
+            <div class="news__area__list__content">
+              <h3>ポートフォリオ制作開始</h3>
+              <p>ポートフォリオのトップページを作成。HTML 大体の骨組みとダミー画像を挿入,Scss(css 自動コンパイル),images ダミー画像入れる。今回のサイト作成から'rem'で指定する事を意識して作成する。次はコンタクトフォームの作成、サムネイルの作成し差し替える。全ての文章。</p>
+              <time datetime="2025/07/26">2025/07/26 約3h</time>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="contact">
+    <div class="contact__ttl" data-aos="fade-up">
+      <h2>CONTACT</h2>
+    </div>
+    <div class="contact__btn" data-aos="fade-up">
+        <a href="#">
+          <h4>お問い合わせ</h4>
+        </a>
+    </div>
+  </section>
+</main>
+<footer class="footer">
+  <ul class="footer__list">
+    <li><a href="#">プライバシーポリシー</a></li>
+    <li><a href="#">お問い合わせ</a></li>
+  </ul>
+  <p> &comp; 2025 ポートフォリオサイト</p>
+</footer>
+
+<!-- jquery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- aos -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init( {
+    //実行のスピード
+    delay: 100,
+    //アニメーションスピード
+    duration: 1200,
+    //一回きり（都度動かしたい時は'false'）
+    once: true
+  });
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>
