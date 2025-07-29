@@ -1,3 +1,6 @@
+// @forward "self"; // 「self」はこのファイル自身
+@use "sass:map";
+
 // =============================================
 // 変数
 // =============================================
@@ -12,10 +15,11 @@ $breakpoints: (
   l: "screen and (max-width: 1600px)", //PC
   m: "screen and (max-width: 1024px)", //タブレット
   ms: "screen and (max-width: 800px)", //非常時
-  s: "screen and (max-width: 767px)",  //スマートフォン
+  s: "screen and (max-width: 767px)"  //スマートフォン
 );
+
 @mixin media($breakpoint) {
-  @media #{map-get($breakpoints, $breakpoint)} {
+  @media #{map.get($breakpoints, $breakpoint)} {
     @content;
   }
 }
@@ -25,17 +29,7 @@ body {
   color: $font-Color;
   font-family: 'Noto Sans JP', sans-serif;
 }
-.wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
-  @include media(m) {
-    max-width: 80%;
-  }
-  @include media(s) {
-    max-width: 100%;
-    margin: 0 5%;
-  }
-}
+
 img {
   width: 100%;
   object-fit: cover;

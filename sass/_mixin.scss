@@ -1,5 +1,5 @@
-@import "_base";
-
+@use "base";  // base内の変数やmixinの使用可能
+@forward "base";  // style.scssへexport的な役割
 
 @mixin section--ttl {
   margin-top: 2rem;
@@ -10,9 +10,9 @@
   }
   span {
     font-size: 16px;
-    color: $sv-color;
+    color: base.$sv-color;
   }
-  @include media(s) {
+  @include base.media(s) {
     h2 {
       font-size: 2rem;
       padding-bottom: 12px;
@@ -30,9 +30,9 @@
     color: #fff;
     padding: 8px 32px;
     border-radius: 64px;
-    background-color: $sv-color;
+    background-color: base.$sv-color;
   }
-  @include media(s) {
+  @include base.media(s) {
     margin-top: 1rem;
     h4 {
       padding: 6px 12px;
@@ -50,8 +50,8 @@
 
     width: 300px;
     height: 100%;
-    background-color: $bg-color;
-    color: $font-Color;
+    background-color: base.$bg-color;
+    color: base.$font-Color;
     z-index: 100;
     
     /* スライドインのアニメーション */

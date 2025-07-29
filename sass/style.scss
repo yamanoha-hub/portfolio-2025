@@ -1,13 +1,21 @@
-@import "_mixin";
-
+@use "mixin";
+@use "base";
 // 表示崩れ見るため
 // * {
 //   outline: 2px solid blue;
 // }
 
-// @include media(m) {
-
-// }
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  @include base.media(m) {
+    max-width: 80%;
+  }
+  @include base.media(s) {
+    max-width: 100%;
+    margin: 0 5%;
+  }
+}
 
 .header {
   display: flex;
@@ -39,10 +47,8 @@
       gap: 32px;
     }
   }
-  @include media(s) {
-    @include hamburger;
-    // background-color: #333;
-
+  @include base.media(s) {
+    @include mixin.hamburger;
   }
 
   // スクロール後のheader変化
@@ -53,13 +59,13 @@
         transition: 0.5s; color: #fff;
       }
     }
-    @include media(s) {
-      @include hamburger;
+    @include base.media(s) {
+      @include mixin.hamburger;
       .header__nav__list {
-      a {
-        transition: 0.5s; color: $font-Color;
+        a {
+          transition: 0.5s; color: base.$font-Color;
+        }
       }
-    }
     }
   }
 }
@@ -67,9 +73,9 @@
 .works {
   padding-top: 6rem;
   padding-bottom: 6rem;
-  background-color: $bg-color;
+  background-color: base.$bg-color;
   .section__ttl {
-    @include section--ttl;
+    @include mixin.section--ttl;
   }
   &__content {
     padding-top: 4rem;
@@ -97,14 +103,14 @@
         height: 100%;
       }
       a {
-        @include btn;
+        @include mixin.btn;
       }
     }
   }
   &__btn {
-    @include btn;
+    @include mixin.btn;
   }
-  @include media(m) {
+  @include base.media(m) {
     &__content {
       padding-bottom: 0;
       flex-direction: column;
@@ -124,7 +130,7 @@
       }
     }
   }
-  @include media(s) {
+  @include base.media(s) {
     padding-top: 72px;
     padding-bottom: 72px;
     &__content {
@@ -164,7 +170,7 @@
   padding-top: 6rem;
   padding-bottom: 6rem;
   .section__ttl {
-    @include section--ttl;
+    @include mixin.section--ttl;
   }
   &__content {
     display: flex;
@@ -179,13 +185,13 @@
     }
   }
 
-  @include media(m) {
+  @include base.media(m) {
     .section__ttl {
       padding-top: 80px;
       padding-bottom: 40px;
     }
   }
-  @include media(s) {
+  @include base.media(s) {
     padding-top: 72px;
     padding-bottom: 72px;
     .section__ttl {
@@ -206,7 +212,7 @@
   padding-top: 6rem;
   padding-bottom: 6rem;
   .section__ttl {
-    @include section--ttl;
+    @include mixin.section--ttl;
   }
   &__area {
     padding-top: 3rem;
@@ -257,10 +263,10 @@
     }
   }
   &__btn {
-    @include btn;
+    @include mixin.btn;
   }
 
-  @include media(s) {
+  @include base.media(s) {
     padding-top: 72px;
     padding-bottom: 72px;
     &__area {
@@ -305,9 +311,9 @@
     margin-bottom: 19.2px;
   }
   &__btn {
-    @include btn;
+    @include mixin.btn;
   }
-  @include media(s) {
+  @include base.media(s) {
     height: 320px;
     &__ttl {
       font-size: 36px;
@@ -335,7 +341,7 @@
       }
     }
   }
-  @include media(s) {
+  @include base.media(s) {
     padding: 6px 0;
     &__list {
       li {
