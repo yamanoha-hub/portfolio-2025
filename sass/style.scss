@@ -1,5 +1,6 @@
 @use "mixin";
 @use "base";
+
 // 表示崩れ見るため
 // * {
 //   outline: 2px solid blue;
@@ -9,11 +10,7 @@
   max-width: 1200px;
   margin: 0 auto;
   @include base.media(m) {
-    max-width: 80%;
-  }
-  @include base.media(s) {
-    max-width: 100%;
-    margin: 0 5%;
+    padding: 0 5%;
   }
 }
 
@@ -28,9 +25,8 @@
   z-index: 10;
   transition: 0.5s;
 
-
   &__logo {
-    margin: 16px;
+    margin: 1rem;
     img {
       width: 128px;
       height: 64px;
@@ -41,10 +37,10 @@
   }
 
   &__nav {
-    margin-right: 16px;
+    margin-right: 1rem;
     &__list {
       display: flex;
-      gap: 32px;
+      gap: 1.5rem;
     }
   }
   @include base.media(s) {
@@ -53,193 +49,276 @@
 
   // スクロール後のheader変化
   &.header--bg {
-    transition: 0.5s; background-color: #333;
+    transition: 0.5s;
+    background-color: #333;
     .header__nav__list {
       a {
-        transition: 0.5s; color: #fff;
+        transition: 0.5s;
+        color: #fff;
       }
     }
     @include base.media(s) {
       @include mixin.hamburger;
       .header__nav__list {
         a {
-          transition: 0.5s; color: base.$font-Color;
+          transition: 0.5s;
+          color: base.$font-Color;
         }
       }
     }
   }
 }
 
+.page-top {
+  @include mixin.page-top;
+}
+
+// hero
+.hero {
+  position: relative;
+  text-align: center;
+  min-height: 72vh;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #e6f7fb 0%, #fff 60%);
+  &__bg {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(600px 300px at 80% 20%, rgba(0,180,216,.15), transparent 60%),radial-gradient(400px 200px at 10% 80%, rgba(30,58,95,.12), transparent 60%);
+    pointer-events: none;
+  }
+  &--ttl {
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+    color: base.$main-color;
+    line-height: 1.3;
+  }
+  &__lead {
+    margin-bottom: 2rem;
+    font-size: 1.25rem;
+    opacity: 0.85;
+  }
+  &__cta {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    @include mixin.btn;
+  }
+  @include base.media(m) {
+    &--ttl {
+      font-size: 2rem;
+    }
+    &__lead {
+      font-size: 1.13rem;
+    }
+  }
+  @include base.media(s) {
+    min-height: 100vh;
+    &--ttl {
+      font-size: 1.75rem;
+    }
+    &__lead {
+      font-size: 1rem;
+      margin-bottom: 3rem;
+    }
+  }
+}
+// hero
+
+// about
+.about {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  .section__ttl {
+    @include mixin.section--ttl;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 2rem;
+    padding: 2rem 1rem 0;
+    font-size: 1rem;
+    &__avatarPlaceholder {
+      width: 100%;
+      height: 300px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 16px;
+        -o-object-fit: cover;
+        object-fit: cover;
+        -o-object-position: 50% 15%;
+        object-position: 50% 15%;
+      }
+    }
+    &__body {
+      &__text {
+        padding: 0.85rem;
+        margin-bottom: 1rem;
+      }
+      &__highlights {
+        padding-left: 1rem;
+        li {
+          margin: 6px 0;
+        }
+      }
+    }
+  }
+  @include base.media(m) {
+    &__grid {
+      grid-template-columns: 200px 1fr;
+      padding: 2rem 0 0;
+      
+      &__avatarPlaceholder {
+        height: 200px;
+      }
+    }
+  }
+  @include base.media(s) {
+    &__grid {
+      gap: 1rem;
+      grid-template-columns: 1fr;
+      &__avatarPlaceholder {
+        height: 400px;
+      }
+    }
+  }
+}
+// about
+
+// works
 .works {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
   background-color: base.$bg-color;
   .section__ttl {
     @include mixin.section--ttl;
   }
-  &__content {
-    padding-top: 4rem;
-    display: flex;
-    gap: 4rem;
-
-    &__item {
-      width: 100%;
-      height: 100%;
+  &__grid {
+    padding: 4rem 1rem 0;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+    .worksCard {
       display: flex;
       flex-direction: column;
       align-items: center;
-      h3 {
-        font-size: 2rem;
+
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 8px 24px rgba( 0, 0, 0, 0.1);
+      &__thumb {
+        img {
+          display: block;
+          width: 100%;
+          height: 180px;
+          object-fit: cover;
+        }
+        &--placeholder {
+          height: 180px;
+          background: #f1f5f9;
+        }
       }
-      img {
-        margin: 3rem 0;
-        max-width: 350px;
-        max-height: 350px;
-        object-fit: cover;
-        object-position: 50% 50%;
-      }
-      &--detail {
-        width: 100%;
-        height: 100%;
-      }
-      a {
-        @include mixin.btn;
-      }
-    }
-  }
-  &__btn {
-    @include mixin.btn;
-  }
-  @include base.media(m) {
-    &__content {
-      padding-bottom: 0;
-      flex-direction: column;
-      &__item {
-        &--detail {
+
+      &__body {
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        &__title {
+          font-size: 1.25rem;
+          color: base.$main-color;
+        }
+        &__desc {
+          color: #555;
+        }
+        &__links {
           display: flex;
-          gap: 32px;
-          img {
-            margin-bottom: 0;
-            max-width: 160px;
-            max-height: 160px;
-          }
-          p {
-            font-size: 18px;
-          }
+          gap: 1rem;
         }
       }
-    }
-  }
-  @include base.media(s) {
-    padding-top: 72px;
-    padding-bottom: 72px;
-    &__content {
-      padding-top: 48px;
-      padding-bottom: 54px;
-      gap: 36px;
-      &__item {
-        h3 {
-          font-size: 28px;
-          margin-bottom: 0;
-        }
-        &--detail {
-          flex-direction: column;
-          align-items: center;
-          gap: 0;
-          img {
-            width: 180px;
-            height: 180px;
-            max-width: 100%;
-            max-height: 100%;
-            padding: 0 24px 24px;
-            box-sizing: border-box;
-          }
-          p {
-            font-size: 14px;
-          }
-        }
-        &:last-child {
-          margin-bottom: 50px;
-        }
-      }
-    }  
-  }
-}
-
-.about {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-  .section__ttl {
-    @include mixin.section--ttl;
-  }
-  &__content {
-    display: flex;
-    gap: 32px;
-    padding-top: 32px;
-    font-size: 18px;
-    img {
-      max-width: 40%;
-    }
-    &__text {
-      padding: 1rem;
     }
   }
 
   @include base.media(m) {
-    .section__ttl {
-      padding-top: 80px;
-      padding-bottom: 40px;
+    &__grid {
+      padding: 4rem 0 0;
+      grid-template-columns:repeat(2,1fr);
     }
   }
   @include base.media(s) {
-    padding-top: 72px;
-    padding-bottom: 72px;
-    .section__ttl {
-      padding-top: 0;
-      padding-bottom: 0;
-    }
-    &__content {
-      padding-top: 10%;
-      margin-top: 12px;
-      margin-bottom: 15%;
-      gap: 12px;
-      font-size: 14px
+    &__grid {
+      grid-template-columns:1fr;
     }
   }
 }
+// works
 
-.news {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+// Skills
+.skills {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
   .section__ttl {
     @include mixin.section--ttl;
   }
-  &__area {
-    padding-top: 3rem;
+  &__list {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  &__badge {
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: #eef2f7;
+    border: 1px solid #e5e7eb;
+  }
+  @include base.media(s) {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+  }
+}
+// Skills
+
+// news
+.news {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  .section__ttl {
+    @include mixin.section--ttl;
+  }
+  &__grid {
+    padding: 3rem 1rem 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    li {
+    .newsArea {
       width: 100%;
-      height: 100%;
-    }
-    &__list {
-      display: flex;
-      padding: 1rem 1rem 0.5rem;
+      padding: 1rem 0;
       border-bottom: 1px solid #e5e5e5;
+      display: flex;
       gap: 2rem;
-      img {
-        width: 6rem;
-        height: 6rem;
-        border-radius: 20%;
-        object-fit: cover;
-        object-position: 50% 50%;
+      &__thumb {
+        img {
+          width: 6rem;
+          height: 6rem;
+          border-radius: 20%;
+          object-fit: cover;
+          object-position: 50% 50%;
+        }
       }
-      &__content {
+      &__body {
         width: 100%;
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
         h3 {
           font-size: 1.5rem;
           line-height: 1;
@@ -262,65 +341,56 @@
       }
     }
   }
-  &__btn {
-    @include mixin.btn;
-  }
 
   @include base.media(s) {
-    padding-top: 72px;
-    padding-bottom: 72px;
-    &__area {
-      padding-top: 24px;
-      padding-bottom: 60px;
-      &__list {
-        display: flex;
-        padding: 14px 14px 7px;
-        gap: 14px;
-        img {
-        width: 5em;
-        height: 5em;
-        }
-        &__content {
-          justify-content: space-between;
+    &__grid {
+      padding: 3rem 0 0;
+      .newsArea {
+        gap: 1rem;
+        &__body {
           h3 {
-            font-size: 21px;
+            font-size: 1.13rem;
           }
           p {
-            font-size: 14px;
+            font-size: 1rem;
           }
           time {
-            font-size: 7px;
+            font-size: 0.75rem;
           }
         }
       }
     }
   }
 }
+// news
 
+// contact
 .contact {
-  background-color: #6ea4bf;
-  height: 416px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  &__ttl {
-    text-align: center;
-    font-size: 48px;
-    color: #fff;
-    margin-bottom: 19.2px;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: base.$bg-color;
+  .section__ttl {
+    @include mixin.section--ttl;
   }
-  &__btn {
+  &__lead {
+    margin: 3rem 0;
+    opacity: 0.9;
+    text-align: center;
+  }
+  &__links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
     @include mixin.btn;
   }
   @include base.media(s) {
-    height: 320px;
-    &__ttl {
-      font-size: 36px;
-      margin-bottom: 29px;
+    &__lead {
+      margin: 3rem 0 1rem;
     }
   }
 }
+// contact
 
 .footer {
   background-color: #333;

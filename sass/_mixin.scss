@@ -5,38 +5,56 @@
   margin-top: 2rem;
   text-align: center;
   h2 {
-    font-size: 3rem;
+    font-size: 2.25rem;
     font-weight: bold;
   }
   span {
-    font-size: 16px;
+    font-size: 1rem;
     color: base.$sv-color;
   }
   @include base.media(s) {
+    margin-top: 1rem;
     h2 {
       font-size: 2rem;
-      padding-bottom: 12px;
+      padding-bottom: 0.85rem;
     }
     span {
       font-size: 1rem;
-
     }
   }
 }
 
 @mixin btn {
-  margin-top: 1.5rem;
-  h4 {
-    color: #fff;
-    padding: 8px 32px;
-    border-radius: 64px;
-    background-color: base.$sv-color;
-  }
-  @include base.media(s) {
-    margin-top: 1rem;
-    h4 {
-      padding: 6px 12px;
-      font-size: 12px;
+  .btn {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 999px;
+    font-weight: 700;
+    transition: 0.2s;
+    box-shadow: 0 8px 24px rgba( 0, 0, 0, 0.1);
+    &--primary { 
+      color: #fff;
+      background: base.$sv-color;
+      border-color: base.$sv-color;
+      &:hover {
+        filter: brightness(.95);
+      }
+    }
+    &--ghost {
+      background: #fff;
+      color: base.$main-color;
+      border-color: base.$main-color;
+      &:hover {
+        background:#f7fafc;
+      }
+    }
+  
+    @include base.media(s) {
+      margin-top: 1rem;
+      h4 {
+        padding: 6px 12px;
+        font-size: 12px;
+      }
     }
   }
 }
@@ -102,5 +120,31 @@
       }
 
     }
+  }
+}
+
+@mixin page-top {
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+
+  background: #fff;
+  border: solid 2px #333;
+  border-radius: 50%;
+  z-index: 10;
+  cursor: pointer;
+  &__arrow {
+    display: block;
+    height: 10px;
+    width: 10px;
+    border-top: 3px solid #333;
+    border-right: 3px solid #333;
+    transform: translateY(20%) rotate(-45deg);
   }
 }

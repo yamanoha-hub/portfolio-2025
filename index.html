@@ -18,8 +18,9 @@
   </a>
   <nav class="header__nav">
     <ul class="header__nav__list">
-      <li><a href="#works">制作実績</a></li>
       <li><a href="#about">プロフィール</a></li>
+      <li><a href="#works">制作実績</a></li>
+      <li><a href="#news">制作履歴</a></li>
       <li><a href="#contact">お問い合わせ</a></li>
     </ul>
     <div class="header__nav-hamburger">
@@ -29,53 +30,119 @@
     </div>    
   </nav>
 </header>
+
+<button id="js__page-top" class="page-top">
+  <span class="page-top__arrow"></span>
+</button>
+
 <main>
-  <section class="works" id="works">
-    <div class="wrapper" data-aos="fade-up">
-      <div class="section__ttl">
-        <h2>制作実績</h2>
-        <span>WORKS</span>
+  <section class="hero">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="wrapper">
+      <h1 class="hero--ttl">丁寧なコーディングで、信頼を生むWeb制作を。</h1>
+      <p class="hero__lead">沖縄から、誠実に。シンプルで伝わるサイトづくり。</p>
+      <div class="hero__cta">
+        <a href="#" class="btn btn--primary">制作実績を見る</a>
       </div>
-      <ul class="works__content">
-        <li class="works__content__item">
-          <h3>がんばるペイント企業サイト</h3>
-          <img src="images/portfolio-logo.png" alt="がんばるペイントサムネイル">
-          <div class="works__content__item--detail">
-            <p>WordPressで構築。構成・デザイン・SEOを意識して制作。
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi earum voluptates vero! Sed pariatur velit illo fugiat dolor? Dicta velit magnam obcaecati impedit magni numquam delectus facilis soluta blanditiis pariatur.</p>
-          </div>
-          <a href="https://ganbarupaint.com/" target="_blank" class="btn">
-            <h4>サイトを見る</h4>
-          </a>
-        </li>
-        <li class="works__content__item">
-          <h3>模写コーポレートサイト</h3>
-          <img src="images/dummy.png" alt="">
-          <div class="works__content__item--detail">
-            <p>HTML/CSS/SCSS/JS/GitHubで構築した模写サイト。Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum quae asperiores voluptate fugiat error hic impedit dolor fuga modi, dicta, laboriosam ea accusantium corporis animi, quas quia consequatur sunt maiores?</p>
-          </div>
-          <a href="https://ganbarupaint.com/" target="_blank" class="btn">
-            <h4>サイトを見る</h4>
-          </a>
-        </li>
-      </ul>
     </div>
   </section>
 
+  <!-- about -->
   <section id="about" class="about">
     <div class="wrapper" data-aos="fade-up">
       <div class="section__ttl">
         <h2>プロフィール</h2>
         <span>PROFILE</span>
       </div>
-      <div class="about__content">
-        <img src="images/portfolio-logo2.png" alt="プロフィール画像">
-        <article class="about__content__text">
-          <h3>山端 泰光</h3>
-          <br>
-          <p>元・塗装／空調職人 → Web制作へ。丁寧さと誠実さを武器に、信頼される制作者を目指しています。</p>
+      <div class="about__grid">
+        <div class="about__grid__photo" aria-hidden="true">
+          <div class="about__grid__avatarPlaceholder" role="img">
+            <img src="images/profile.png" alt="プロフィール写真">
+          </div>
+        </div>
+        <div class="about__grid__body">
+          <p class="about__grid__body__text">
+            前職で塗装・空調設備の現場に従事し、「段取り」と「丁寧な対応」を重視してきました。
+            会社サイトをWordPressで自主制作した経験をきっかけにWeb制作へ挑戦。
+            HTML/CSS/JavaScript、SCSS、GitHubを日々学習し、誠実に伝わるWebを目指します。
+          </p>
+          <ul class="about__grid__body__highlights">
+            <li>慎重で丁寧なコーディング</li>
+            <li>ユーザーに安心感を与える構成</li>
+            <li>少人数チームでの着実な進行</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- about -->
+
+  <section class="works" id="works">
+    <div class="wrapper" data-aos="fade-up">
+      <div class="section__ttl">
+        <h2>制作実績</h2>
+        <span>WORKS</span>
+      </div>
+      <div class="works__grid">
+        <article class="worksCard">
+          <div class="worksCard__thumb">
+            <img src="images/thumb-ganbarupaint.jpg" alt="がんばるペイントのWebサイト サムネイル">
+          </div>
+          <div class="worksCard__body">
+            <h3 class="worksCard__body__title">がんばるペイント 企業サイト</h3>
+            <p class="worksCard__body__desc">WordPressで構築。ヒアリングを重ね、安心感と導線設計を重視。</p>
+            <div class="worksCard__body__links">
+              <a class="btn btn--ghost" href="https://ganbarupaint.com" target="_blank" rel="noopener">サイトへ</a>
+            </div>
+          </div>
+        </article>
+        <article class="worksCard">
+          <div class="worksCard__thumb">
+            <img src="images/thumb-mosha.jpg" alt="模写コーポレートサイトのサムネイル">
+          </div>
+          <div class="worksCard__body">
+            <h3 class="worksCard__body__title">模写コーポレートサイト</h3>
+            <p class="worksCard__body__desc">HTML/CSS/SCSS/JSで構築。BEM設計・レスポンシブ対応。</p>
+            <div class="workCard__body__links">
+              <a class="btn btn--ghost" href="#" target="_blank" rel="noopener">デモを見る</a>
+              <a class="btn btn--ghost" href="#" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </div>
+        </article>
+        <article class="worksCard worksCard--placeholder" aria-label="今後の制作予定枠">
+          <div class="worksCard__thumb workCsard__thumb--placeholder"></div>
+          <div class="worksCard__body">
+            <h3 class="workCard__body__title">次回作（準備中）</h3>
+            <p class="workCard__body__desc">公開予定の作品を順次追加します。</p>
+          </div>
         </article>
       </div>
+    </div>
+  </section>
+
+  <section id="skills" class="section skills">
+    <div class="wrapper" data-aos="fade-up">
+      <div class="section__ttl">
+        <h2>スキル</h2>
+        <span>SKILLS</span>
+      </div>
+      <ul class="skills__list">
+        <li class="skills__item">
+          <span class="skills__badge">HTML5</span>
+        </li>
+        <li class="skills__item">
+          <span class="skills__badge">SCSS / CSS</span>
+        </li>
+        <li class="skills__item">
+          <span class="skills__badge">JavaScript</span>
+        </li>
+        <li class="skills__item">
+          <span class="skills__badge">WordPress</span>
+        </li>
+        <li class="skills__item">
+          <span class="skills__badge">Git / GitHub</span>
+        </li>
+      </ul>
     </div>
   </section>
 
@@ -85,39 +152,62 @@
         <h2>制作履歴</h2>
         <span>NEWS</span>
       </div>
-      <ul class="news__area">
-        <li>
-          <a href="#" class="news__area__list">
+      <div class="news__grid">
+        <a class="newsArea">
+          <div class="newsArea__thumb">
             <img src="images/dummy2.png" alt="ダミー画像">
-            <div class="news__area__list__content">
-              <h3>ポートフォリオ制作開始</h3>
-              <p>コンタクトフォームの作成、サムネイルの作成し差し替える。全ての文章。</p>
-              <time datetime="2025/07/28">2025/07/28 約1h</time>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="news__area__list">
+          </div>
+          <div class="newsArea__body">
+            <h3>アニメーション追加。</h3>
+            <p>アニメーション(スムーススクロール、トップ戻るボタン)。スムーススクロールはcssではなくjQueryで作成した。</p>
+            <time datetime="2025/07/30">2025/07/30,31 約6h</time>
+          </div>
+        </a>
+        <a class="newsArea">
+          <div class="newsArea__thumb">
             <img src="images/dummy2.png" alt="ダミー画像">
-            <div class="news__area__list__content">
-              <h3>ポートフォリオ制作開始</h3>
-              <p>ポートフォリオのトップページを作成。HTML 大体の骨組みとダミー画像を挿入,Scss(css 自動コンパイル),images ダミー画像入れる。今回のサイト作成から'rem'で指定する事を意識して作成する。次はコンタクトフォームの作成、サムネイルの作成し差し替える。全ての文章。</p>
-              <time datetime="2025/07/26">2025/07/26 約3h</time>
-            </div>
-          </a>
-        </li>
-      </ul>
+          </div>
+          <div class="newsArea__body">
+            <h3>コンテンツ追加</h3>
+            <p>Hero,Skills作成、HTML&Cssクラス名とレイアウト変更、BEM設定重視。メインカラー、サブカラー変更。</p>
+            <time datetime="2025/07/30">2025/07/30,31 約12h</time>
+          </div>
+        </a>
+        <a class="newsArea">
+          <div class="newsArea__thumb">
+            <img src="images/dummy2.png" alt="ダミー画像">
+          </div>
+          <div class="newsArea__body">
+            <h3>SCSSのバージョン対応</h3>
+            <p>Scssの今後のバージョンアップに関しての対応。</p>
+            <time datetime="2025/07/28">2025/07/28 約2h</time>
+          </div>
+        </a>
+        <a class="newsArea">
+          <div class="newsArea__thumb">
+            <img src="images/dummy2.png" alt="ダミー画像">
+          </div>
+          <div class="newsArea__body">
+            <h3>ポートフォリオ制作開始</h3>
+            <p>ポートフォリオのトップページを作成。HTML 大体の骨組みとダミー画像を挿入,Scss(css 自動コンパイル),images ダミー画像入れる。今回のサイト作成から'rem'で指定する事を意識して作成する。次はコンタクトフォームの作成、サムネイルの作成し差し替える。全ての文章。</p>
+            <time datetime="2025/07/26">2025/07/26 約3h</time>
+          </div>
+        </a>
+      </div>
     </div>
   </section>
 
-  <section class="contact">
-    <div class="contact__ttl" data-aos="fade-up">
-      <h2>CONTACT</h2>
-    </div>
-    <div class="contact__btn" data-aos="fade-up">
-        <a href="#">
-          <h4>お問い合わせ</h4>
-        </a>
+  <section  id="contact" class="contact">
+    <div class="wrapper">
+      <div id="contactTitle" class="section__ttl">
+        <h2>お問い合わせ</h2>
+        <span>CONTACT</span>
+      </div>
+      <p class="contact__lead">ご相談はメールまたはSNSからお気軽にどうぞ。</p>
+      <div class="contact__links">
+        <a class="btn btn--primary" href="mailto:your-email@example.com">メールで相談する</a>
+        <a class="btn btn--ghost" href="https://github.com/your-account" target="_blank" rel="noopener">GitHubを見る</a>
+      </div>
     </div>
   </section>
 </main>
@@ -128,9 +218,6 @@
   </ul>
   <p> &comp; 2025 ポートフォリオサイト</p>
 </footer>
-
-<!-- jquery -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <!-- aos -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -145,6 +232,9 @@
   });
 </script>
 
+<!-- jquery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="script.js"></script>
+
 </body>
 </html>
