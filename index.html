@@ -8,6 +8,30 @@
   <link rel="stylesheet" href="sass/reset.css">
   <link rel="stylesheet" href="sass/style.css">
 
+  <!-- ファビコンの設定 -->
+  <link rel="icon" href="images/favicon.ico" type="image/png">
+
+  <!-- OGP設定 -->
+  <!-- Primary Meta Tags -->
+  <title>ポートフォリオサイト</title>
+  <meta name="title" content="ポートフォリオサイト" />
+  <meta name="description" content="自己紹介を掲載したポートフォリオサイトです。" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://visionary-tartufo-ba380d.netlify.app/" />
+  <meta property="og:title" content="ポートフォリオサイト" />
+  <meta property="og:description" content="自己紹介を掲載したポートフォリオサイトです。" />
+  <meta property="og:image" content="https://portfolio-yama.netlify.app/images/portfolio-thumb.png" />
+  
+  <!-- X (Twitter) -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://visionary-tartufo-ba380d.netlify.app/" />
+  <meta property="twitter:title" content="ポートフォリオサイト" />
+  <meta property="twitter:description" content="自己紹介を掲載したポートフォリオサイトです。" />
+  <meta property="twitter:image" content="https://portfolio-yama.netlify.app/images/portfolio-thumb.png" />
+  <!-- OGP設定 -->
+  
   <!-- aos -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
@@ -63,7 +87,7 @@
         <div class="about__grid__body">
           <p class="about__grid__body__text">
             前職で塗装・空調設備の現場に従事し、「段取り」と「丁寧な対応」を重視してきました。
-            会社サイトをWordPressで自主制作した経験をきっかけにWeb制作へ挑戦。
+            塗装会社のサイトをWordPressで自主制作した経験をきっかけにWeb制作へ挑戦。
             HTML/CSS/JavaScript、SCSS、GitHubを日々学習し、誠実に伝わるWebを目指します。
           </p>
           <ul class="about__grid__body__highlights">
@@ -86,7 +110,7 @@
       <div class="works__grid">
         <article class="worksCard">
           <div class="worksCard__thumb">
-            <img src="images/thumb-ganbarupaint.jpg" alt="がんばるペイントのWebサイト サムネイル">
+            <img src="images/ganbarupaint-thumb.png" alt="がんばるペイントのWebサイト サムネイル">
           </div>
           <div class="worksCard__body">
             <h3 class="worksCard__body__title">がんばるペイント 企業サイト</h3>
@@ -98,14 +122,14 @@
         </article>
         <article class="worksCard">
           <div class="worksCard__thumb">
-            <img src="images/thumb-mosha.jpg" alt="模写コーポレートサイトのサムネイル">
+            <img src="images/dummysite-thumb.png" alt="模写コーポレートサイトのサムネイル">
           </div>
           <div class="worksCard__body">
             <h3 class="worksCard__body__title">模写コーポレートサイト</h3>
             <p class="worksCard__body__desc">HTML/CSS/SCSS/JSで構築。BEM設計・レスポンシブ対応。</p>
             <div class="workCard__body__links">
-              <a class="btn btn--ghost" href="#" target="_blank" rel="noopener">デモを見る</a>
-              <a class="btn btn--ghost" href="#" target="_blank" rel="noopener">GitHub</a>
+              <a class="btn btn--ghost" href="https://visionary-tartufo-ba380d.netlify.app" target="_blank" rel="noopener">サイトへ</a>
+              <a class="btn btn--ghost" href="https://github.com/yamanoha-hub/Dummy-Site" target="_blank" rel="noopener">GitHub</a>
             </div>
           </div>
         </article>
@@ -153,6 +177,16 @@
         <span>NEWS</span>
       </div>
       <div class="news__grid">
+        <a class="newsArea">
+          <div class="newsArea__thumb">
+            <img src="images/dummy2.png" alt="ダミー画像">
+          </div>
+          <div class="newsArea__body">
+            <h3>Netlifyでホスティング。OGP設定。制作実績のサムネイル追加</h3>
+            <p>Netlifyでポートフォリオサイトと模写したダミーサイトをホスティング。OGP設定を追加した。ファビコン作成と設定。作成した各サイトのサムネイルを作成し追加。カードの間隔調整とリンク再設定。</p>
+            <time datetime="2025/07/30">2025/08/2,3 約10h</time>
+          </div>
+        </a>
         <a class="newsArea">
           <div class="newsArea__thumb">
             <img src="images/dummy2.png" alt="ダミー画像">
