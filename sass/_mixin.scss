@@ -7,10 +7,12 @@
   h2 {
     font-size: 2.25rem;
     font-weight: bold;
+    font-family: 'Montserrat', 'Noto Sans JP', sans-serif;
   }
   span {
     font-size: 1rem;
     color: base.$sv-color;
+    font-family: 'Montserrat', 'Noto Sans JP', sans-serif;
   }
   @include base.media(s) {
     margin-top: 1rem;

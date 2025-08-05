@@ -298,10 +298,12 @@ a {
 .about .section__ttl h2 {
   font-size: 2.25rem;
   font-weight: bold;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
 }
 .about .section__ttl span {
   font-size: 1rem;
   color: #00B4D8;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
 }
 @media screen and (max-width: 767px) {
   .about .section__ttl {
@@ -376,10 +378,12 @@ a {
 .works .section__ttl h2 {
   font-size: 2.25rem;
   font-weight: bold;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
 }
 .works .section__ttl span {
   font-size: 1rem;
   color: #00B4D8;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
 }
 @media screen and (max-width: 767px) {
   .works .section__ttl {
@@ -461,10 +465,12 @@ a {
 .skills .section__ttl h2 {
   font-size: 2.25rem;
   font-weight: bold;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
 }
 .skills .section__ttl span {
   font-size: 1rem;
   color: #00B4D8;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
 }
 @media screen and (max-width: 767px) {
   .skills .section__ttl {
@@ -510,10 +516,12 @@ a {
 .news .section__ttl h2 {
   font-size: 2.25rem;
   font-weight: bold;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
 }
 .news .section__ttl span {
   font-size: 1rem;
   color: #00B4D8;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
 }
 @media screen and (max-width: 767px) {
   .news .section__ttl {
@@ -605,10 +613,12 @@ a {
 .contact .section__ttl h2 {
   font-size: 2.25rem;
   font-weight: bold;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
 }
 .contact .section__ttl span {
   font-size: 1rem;
   color: #00B4D8;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
 }
 @media screen and (max-width: 767px) {
   .contact .section__ttl {

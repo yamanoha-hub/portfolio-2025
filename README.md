@@ -1,7 +1,11 @@
-# Dummy-Site（模写サイト）
+# ポートフォリオサイト
+このポートフォリオは、これまでに制作したWebサイトや模写作品をまとめたものです。自己紹介、スキル、制作実績を掲載し、採用担当者の方に自分の強みや学習姿勢をご覧いただけるよう設計しました。
 
-## 概要
-就職活動のため自己紹介や制作物の展示するためにポートフォリオを作成しました。
+## 🔗 URL
+- ポートフォリオサイト: https://portfolio-yama.netlify.app
+- 制作した塗装会社サイト: https://ganbarupaint.com
+- 模写サイト: https://visionary-tartufo-ba380d.netlify.app
+- GitHub: https://github.com/yamanoha-hub
 
 ## 🎯 制作目的
 - HTML・CSS・JavaScriptのアウトプット練習
@@ -31,4 +35,6 @@
 
 ## 製作者
 © 2025 Yamanoha
+
+
 
