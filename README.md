@@ -1,10 +1,10 @@
 # ポートフォリオサイト
-このポートフォリオは、これまでに制作したWebサイトや模写作品をまとめたものです。自己紹介、スキル、制作実績を掲載し、採用担当者の方に自分の強みや学習姿勢をご覧いただけるよう設計しました。
+このポートフォリオは、これまでに制作したWebサイトやWeb制作練習サイトをまとめたものです。自己紹介、スキル、制作実績を掲載し、採用担当者の方に自分の強みや学習姿勢をご覧いただけるよう設計しました。
 
 ## 🔗 URL
 - ポートフォリオサイト: https://portfolio-yama.netlify.app
 - 制作した塗装会社サイト: https://ganbarupaint.com
-- 模写サイト: https://visionary-tartufo-ba380d.netlify.app
+- Web制作練習サイト: https://visionary-tartufo-ba380d.netlify.app
 - GitHub: https://github.com/yamanoha-hub
 
 ## 🎯 制作目的

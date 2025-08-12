@@ -158,12 +158,6 @@
         padding: 0.85rem;
         margin-bottom: 1rem;
       }
-      &__highlights {
-        padding-left: 1rem;
-        li {
-          margin: 6px 0;
-        }
-      }
     }
   }
   @include base.media(m) {
