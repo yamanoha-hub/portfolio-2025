@@ -1,5 +1,5 @@
 $(function() {
-  $('.header__nav__hamburger').click(function() {
+  $('.header__nav-hamburger').click(function() {
     // メニューの開閉状態を切り替える
     $('.header__nav').toggleClass('open');
 
